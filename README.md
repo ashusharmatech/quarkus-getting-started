@@ -1,4 +1,5 @@
 # Getting started with Quarkus
+![.github/workflows/deploytoAksCluster.yml](https://github.com/ashusharmatech/quarkus-getting-started/workflows/.github/workflows/deploytoAksCluster.yml/badge.svg)
 
 This is a minimal CRUD service exposing a couple of endpoints over REST.
 
