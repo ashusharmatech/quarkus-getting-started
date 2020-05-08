@@ -27,7 +27,7 @@ jobs:
     - name: Build and push image to ACR
       id: build-image
       run: |
-        docker build "$GITHUB_WORKSPACE/" -f  "src/main/docker/Dockerfile.native" -t quarkusgettingstarted.azurecr.io/ashutoshkube:${{ github.sha }}
+        docker build "$GITHUB_WORKSPACE/" -f  "src/main/docker/Dockerfile.jvm" -t quarkusgettingstarted.azurecr.io/ashutoshkube:${{ github.sha }}
         docker push quarkusgettingstarted.azurecr.io/ashutoshkube:${{ github.sha }}
     
     - uses: azure/k8s-set-context@v1
