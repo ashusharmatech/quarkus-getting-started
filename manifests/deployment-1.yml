@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "ashutoshkube"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "ashutoshkube"
+    spec:
+      containers:
+        - name: "ashutoshkube"
+          image: "quarkusgettingstarted.azurecr.io/ashutoshkube"
+          ports:
+          - containerPort: 8080
