@@ -29,7 +29,7 @@ ENV GRAALVM_HOME /opt/graalvm
 ENV JAVA_HOME /opt/graalvm
 ENV WORK_DIR /project
 ENV PATH $PATH:$JAVA_HOME/bin:$MAVEN_HOME/bin/
-
+RUN cd $WORK_DIR
 RUN pwd
 RUN ls -lrt
 
