@@ -30,7 +30,7 @@ ENV JAVA_HOME /opt/graalvm
 ENV WORK_DIR /project
 ENV PATH $PATH:$JAVA_HOME/bin
 
-RUN mvn package -Pnative -Dquarkus.native.container-build=true
+RUN $MAVEN_HOME/bin/mvn package -Pnative -Dquarkus.native.container-build=true
 
 WORKDIR /work/
 COPY target/*-runner /work/application
