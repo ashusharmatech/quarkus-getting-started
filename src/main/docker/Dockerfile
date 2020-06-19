@@ -28,9 +28,12 @@ ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
 ENV GRAALVM_HOME /opt/graalvm
 ENV JAVA_HOME /opt/graalvm
 ENV WORK_DIR /project
-ENV PATH $PATH:$JAVA_HOME/bin
+ENV PATH $PATH:$JAVA_HOME/bin:$MAVEN_HOME/bin/
 
-RUN $MAVEN_HOME/bin/mvn package
+RUN pwd
+RUN ls -lrt
+
+RUN mvn package
 
 WORKDIR /work/
 COPY target/*-runner /work/application
