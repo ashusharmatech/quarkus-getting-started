@@ -1,3 +1,4 @@
+FROM registry.access.redhat.com/ubi8/ubi-minimal:latest
 ARG MAVEN_VERSION=3.6.1
 ARG GRAAL_VM_VERSION=19.1.1
 ENV USER_HOME_DIR="/root"
